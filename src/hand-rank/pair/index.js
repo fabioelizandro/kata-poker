@@ -1,17 +1,13 @@
 const score = require('./score');
+const splitPair = require('./split-pair');
 
 module.exports = (cards) => {
-  const numbers = cards.map(card => card.number);
+  const splitedCards = splitPair(cards);
 
-  const numbersOfPairs = numbers.filter(number => {
-    const numberOfOccurrences = numbers.filter(numberToCompare => numberToCompare === number).length;
-    return numberOfOccurrences > 1;
-  }).length;
-
-  if (numbersOfPairs > 0) {
+  if (splitedCards.pair.length > 0) {
     return {
       rank: 'pair',
-      score: score(cards)
+      score: score(splitedCards)
     }
   } else {
     return false;
