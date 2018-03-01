@@ -1,9 +1,9 @@
 module.exports = (cards) => {
-  return cards.reduce((splitedCards, card) => {
-    const isPair = cards.filter(({ number }) => number === card.number).length === 2;
-    const pair = isPair ? splitedCards.pair.concat(card) : splitedCards.pair;
-    const notPair = isPair ? splitedCards.notPair : splitedCards.notPair.concat(card);
+  const isPair = (card) => cards.filter(({ number }) => number === card.number).length === 2;
+  const isNotPair = (card) => !isPair(card);
 
-    return { pair, notPair }
-  }, { pair: [], notPair: [] });
+  return {
+    pair: cards.filter(isPair),
+    notPair: cards.filter(isNotPair)
+  };
 };
