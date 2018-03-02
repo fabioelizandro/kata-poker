@@ -1,3 +1,3 @@
 module.exports = (rankA, rankB) => {
-  return (rankA.level - rankB.level) || (rankA.score - rankB.score);
+  return (rankB.level - rankA.level) || (rankB.score - rankA.score);
 };
