@@ -2,8 +2,8 @@ const handRank = require('./hand-rank');
 const rankSort = require('./rank-sort');
 const winner = require('./winner');
 
-module.exports = (hands) => {
-  const ranks = hands.map(cards => ({ ...handRank(cards), cards }));
+module.exports = (players) => {
+  const ranks = players.map(player => ({ ...handRank(player.cards), ...player }));
   const sortedRanks = rankSort(ranks);
   const [bestRank] = sortedRanks;
 
