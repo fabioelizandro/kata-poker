@@ -12,7 +12,7 @@ describe('high card', () => {
 
     expect(highCard(cards)).toEqual({
       rank: 'high-card',
-      score: 6
+      score: [6, 5, 4, 3, 2]
     });
   });
 });

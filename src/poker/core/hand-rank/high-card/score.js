@@ -1,3 +1,3 @@
 module.exports = (cards) => {
-  return Math.max(...cards.map(card => card.number));
+  return cards.map(card => card.number).sort((a, b) => b - a);
 };
