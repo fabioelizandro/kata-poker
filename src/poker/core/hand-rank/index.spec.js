@@ -12,7 +12,7 @@ describe('hand hank', () => {
 
     expect(handRank(cards)).toEqual({
       rank: 'high-card',
-      score: 6,
+      score: [6, 5, 4, 3, 2],
       level: 0
     });
   });
@@ -28,7 +28,7 @@ describe('hand hank', () => {
 
     expect(handRank(cards)).toEqual({
       rank: 'pair',
-      score: 4,
+      score: [12, 4, 3, 2],
       level: 1
     });
   });
