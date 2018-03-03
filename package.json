@@ -5,6 +5,7 @@
   "author": "Fabio Elizandro <fabio@elizandro.com.br>",
   "license": "MIT",
   "scripts": {
+    "start": "node src/index.js",
     "test": "jest"
   },
   "devDependencies": {
