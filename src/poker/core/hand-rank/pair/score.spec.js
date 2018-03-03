@@ -1,7 +1,7 @@
 const score = require('./score');
 
 describe('pair score', () => {
-  it('suns the pair and returns the nor pair sorted by the highest', () => {
+  it('returns pair nnumber first then remainings sorted by the highest', () => {
     const cardsSample1 = {
       pair: [
         { number: 4, suit: 'hearts' },
@@ -15,7 +15,7 @@ describe('pair score', () => {
     };
 
     expect(score(cardsSample1)).toEqual([
-      8, 8, 7, 6
+      4, 8, 7, 6
     ]);
 
     const cardsSample2 = {
@@ -31,7 +31,7 @@ describe('pair score', () => {
     };
 
     expect(score(cardsSample2)).toEqual([
-      16, 6, 5, 4
+      8, 6, 5, 4
     ]);
   });
 })
