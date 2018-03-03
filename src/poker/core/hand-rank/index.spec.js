@@ -32,4 +32,21 @@ describe('hand hank', () => {
       level: 1
     });
   });
+
+
+  it('returns two pairs over pair', () => {
+    const cards = [
+      { number: 2, suit: 'hearts' },
+      { number: 4, suit: 'clubs' },
+      { number: 4, suit: 'hearts' },
+      { number: 6, suit: 'dimonds' },
+      { number: 6, suit: 'hearts' }
+    ];
+
+    expect(handRank(cards)).toEqual({
+      rank: 'two-pairs',
+      score: [12, 8, 2],
+      level: 2
+    });
+  });
 });
