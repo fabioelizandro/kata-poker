@@ -1,5 +1,13 @@
 # Poker Kata
 
+## How to execute the program
+
+$ yarn start "
+  Player1: 2H 3D 5S 9C KD  Player2: 2C 3H 4S 8C AH
+  Player1: 2H 3D 5S 9C AD  Player2: 2C 3H 4S 8C KH
+  Player1: 2H 3D 5S 9C KD  Player2: 2D 3H 5C 9S KH
+"
+
 ##Tech
 
 * Functional program style
