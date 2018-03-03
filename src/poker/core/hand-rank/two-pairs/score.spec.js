@@ -1,7 +1,7 @@
 const score = require('./score');
 
 describe('two pairs score', () => {
-  it('suns two pairs in decreasing order', () => {
+  it('returns the highest pair then the second pair then the remaining', () => {
     const cardsSample1 = {
       pairs: [
         [
@@ -20,7 +20,7 @@ describe('two pairs score', () => {
     };
 
     expect(score(cardsSample1)).toEqual([
-      12, 8, 8
+      6, 4, 8
     ]);
 
     const cardsSample2 = {
@@ -41,7 +41,7 @@ describe('two pairs score', () => {
     };
 
     expect(score(cardsSample2)).toEqual([
-      16, 12, 4
+      8, 6, 4
     ]);
   });
 })
