@@ -12,7 +12,7 @@ describe('pair', () => {
 
     expect(pair(cards)).toEqual({
       rank: 'pair',
-      score: 4
+      score: [12, 4, 3, 2]
     });
   });
 
