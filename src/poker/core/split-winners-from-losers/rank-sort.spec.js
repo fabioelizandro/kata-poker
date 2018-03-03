@@ -1,4 +1,4 @@
-const rankSort = require('./');
+const rankSort = require('./rank-sort');
 
 describe('rank sort', () => {
   it('sorts ranks by level and score', () => {

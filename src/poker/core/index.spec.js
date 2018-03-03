@@ -28,7 +28,7 @@ describe('poker', () => {
       winners: [
         {
           rank: 'high-card',
-          score: 14,
+          score: [14, 8, 4, 3, 2],
           level: 0,
           cards: player2.cards,
           id: 'Player2'
@@ -37,7 +37,7 @@ describe('poker', () => {
       losers: [
         {
           rank: 'high-card',
-          score: 13,
+          score: [13, 9, 5, 3, 2],
           level: 0,
           cards: player1.cards,
           id: 'Player1'
