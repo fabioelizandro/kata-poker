@@ -81,4 +81,20 @@ describe('hand hank', () => {
       level: 4
     });
   });
+
+  it('returns flush over straight over', () => {
+    const cards = [
+      { number: 2, suit: 'hearts' },
+      { number: 3, suit: 'hearts' },
+      { number: 5, suit: 'hearts' },
+      { number: 8, suit: 'hearts' },
+      { number: 10, suit: 'hearts' }
+    ];
+
+    expect(handRank(cards)).toEqual({
+      rank: 'flush',
+      score: [10, 8, 5, 3, 2],
+      level: 5
+    });
+  });
 });

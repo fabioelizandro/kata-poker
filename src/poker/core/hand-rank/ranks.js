@@ -3,6 +3,7 @@ const pair = require('./pair');
 const twoPairs = require('./two-pairs')
 const threeOfAKind = require('./three-of-a-kind');
 const straight = require('./straight');
+const flush = require('./flush');
 
 module.exports = () => {
   return [
@@ -10,6 +11,7 @@ module.exports = () => {
     pair,
     twoPairs,
     threeOfAKind,
-    straight
+    straight,
+    flush
   ];
 };
