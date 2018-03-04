@@ -8,18 +8,18 @@
       Player1: 2H 3D 5S 9C KD  Player2: 2D 3H 5C 9S KH
     "
 
-##Tech
+## Tech
 
 * Functional program style
 * TDD
 * Javascript
 
-##Problem Description
+## Problem Description
 
 Your job is to compare several pairs of poker hands and to indicate
 which, if either, has a higher rank.
 
-##Poker rules description
+## Poker rules description
 
 A poker deck contains 52 cards - each card has a suit which is one of
 clubs, diamonds, hearts, or spades (denoted C, D, H, and S in the input
@@ -59,7 +59,7 @@ ranked by the following partial order from lowest to highest.
     Ranked by the highest card in the hand.
 
 
-##Suggested Test Cases
+## Suggested Test Cases
 
 Sample input:
 
