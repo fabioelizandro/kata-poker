@@ -113,4 +113,20 @@ describe('hand hank', () => {
       level: 6
     });
   });
+
+  it('returns four of a kind over full house', () => {
+    const cards = [
+      { number: 3, suit: 'dimonds' },
+      { number: 10, suit: 'clubs' },
+      { number: 10, suit: 'spades' },
+      { number: 10, suit: 'dimonds' },
+      { number: 10, suit: 'hearts' }
+    ];
+
+    expect(handRank(cards)).toEqual({
+      rank: 'four-of-a-kind',
+      score: [10, 3],
+      level: 7
+    });
+  });
 });
