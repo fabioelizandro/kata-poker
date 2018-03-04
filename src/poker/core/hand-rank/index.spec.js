@@ -129,4 +129,20 @@ describe('hand hank', () => {
       level: 7
     });
   });
+
+  it('returns straight flush over four of a kind', () => {
+    const cards = [
+      { number: 3, suit: 'dimonds' },
+      { number: 4, suit: 'dimonds' },
+      { number: 5, suit: 'dimonds' },
+      { number: 6, suit: 'dimonds' },
+      { number: 7, suit: 'dimonds' }
+    ];
+
+    expect(handRank(cards)).toEqual({
+      rank: 'straight-flush',
+      score: [7, 6, 5, 4, 3],
+      level: 8
+    });
+  });
 });
