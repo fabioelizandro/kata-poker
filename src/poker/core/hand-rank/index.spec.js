@@ -97,4 +97,20 @@ describe('hand hank', () => {
       level: 5
     });
   });
+
+  it('returns full house over flush', () => {
+    const cards = [
+      { number: 3, suit: 'dimonds' },
+      { number: 3, suit: 'hearts' },
+      { number: 10, suit: 'spades' },
+      { number: 10, suit: 'dimonds' },
+      { number: 10, suit: 'hearts' }
+    ];
+
+    expect(handRank(cards)).toEqual({
+      rank: 'full-house',
+      score: [10, 3],
+      level: 6
+    });
+  });
 });
